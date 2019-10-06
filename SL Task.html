@@ -1,0 +1,68 @@
+<html>
+<head></head>
+<body>
+<script>
+// Question NO 1
+var student;
+function student(name, age,semester)
+{ 
+  this.name=name;
+  this.age=age;
+  this.semester=semester;
+ 
+}
+
+// Question No 2
+var std1=new student("Ali",20,"1st");
+var std2=new student("Nida",22,"2nd");
+var std3=new student("Aman",24,"3rd");
+console.log(std1);
+console.log(std2);
+console.log(std3);
+
+// Question No 3
+student.prototype.Program = "mcs";
+std1.Program="Mcs1";
+std2.Program="Mcs2";
+std3.Program="Mcs3";
+
+Object.defineProperty(student, "Program", {value : "mcs"});
+
+//Question No 4
+
+student.std1 = function(){
+return this.name +" "+ this.age +" "+ this.semester;
+}
+
+student.std2 = function(){
+return this.name +" "+ this.age +" "+ this.semester;
+}
+
+student.std3 = function(){
+return this.name +" "+ this.age +" "+ this.semester;
+}
+
+console.log(std1);
+console.log(std2);
+console.log(std3);
+
+//Question No 5
+
+var arr = [ {name:'Ali' , age:20 , semester:'1st'} , {name:'Nida' , age:22 , semester:'2nd'} , {name:'Aman' , age:24 , semester:'3rd'}];
+var value=prompt("Input Name:");
+
+if (arr[name]==value) {
+console.log(arr[name]);
+}
+else
+{
+console.log("Not Found");
+}
+//console.log(ar);
+
+
+
+//var inp=prompt("input");
+
+</script>
+</html>
